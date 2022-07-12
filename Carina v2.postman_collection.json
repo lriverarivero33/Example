@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "60d79fc6-cdee-4bac-86d6-798e84cd02f3",
+		"name": "Carina v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Versión",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lematizar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3JkUmVzZXJ2ZWQiOiJraWtyZXQiLCJpYXQiOjE1NTU1OTQ5NTksImV4cCI6MTU1OTkxNDk1OX0.FXOMuQcxGNYz-I1T78yrRWTzstpCrfNNkYNwmaHz-mBg6GApOevCnMNrkOyE16-zeRYx3W1OmntDQuyoJ5T2Cw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"word\":\"amor\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getLemmaFromWord",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getLemmaFromWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar lema de palabra",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3JkUmVzZXJ2ZWQiOiJraWtyZXQiLCJpYXQiOjE1NTU1OTQ5NTksImV4cCI6MTU1OTkxNDk1OX0.FXOMuQcxGNYz-I1T78yrRWTzstpCrfNNkYNwmaHz-mBg6GApOevCnMNrkOyE16-zeRYx3W1OmntDQuyoJ5T2Cw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"word\":\"cantaré\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getLemmaFromWord",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getLemmaFromWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar lema de texto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3JkUmVzZXJ2ZWQiOiJraWtyZXQiLCJpYXQiOjE1NTU1OTQ5NTksImV4cCI6MTU1OTkxNDk1OX0.FXOMuQcxGNYz-I1T78yrRWTzstpCrfNNkYNwmaHz-mBg6GApOevCnMNrkOyE16-zeRYx3W1OmntDQuyoJ5T2Cw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\":\"Bebé yo te bote Y desde que te di esa bota, las gatas son de tres en tres Si tú quieres, pregunta si no me crees Que ya no tengo estrés, pa' completar la fila son express Me gusta como el mundo se te fue al revés y yo con ella me enredé Que me enamoré el día que la probé Ya yo no creo que vuelva y te dé Mami porque, ese vicio te lo cancelé\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getLemmaFromText",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getLemmaFromText"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadCorpus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3JkUmVzZXJ2ZWQiOiJraWtyZXQiLCJpYXQiOjE1NTU1OTQ5NTksImV4cCI6MTU1OTkxNDk1OX0.FXOMuQcxGNYz-I1T78yrRWTzstpCrfNNkYNwmaHz-mBg6GApOevCnMNrkOyE16-zeRYx3W1OmntDQuyoJ5T2Cw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"corpus\":[\n  \"De aquí a 2030, erradicar para todas las personas y en todo el mundo la pobreza extrema (actualmente se considera que sufren pobreza extrema las personas que viven con menos de 1,25 dólares de los Estados Unidos al día)\",\n  \"De aquí a 2030, reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones con arreglo a las definiciones nacionales\",\n  \"Implementar a nivel nacional sistemas y medidas apropiados de protección social para todos, incluidos niveles mínimos, y, de aquí a 2030, lograr una amplia cobertura de las personas pobres y vulnerables\",\n  \"De aquí a 2030, garantizar que todos los hombres y mujeres, en particular los pobres y los vulnerables, tengan los mismos derechos a los recursos económicos y acceso a los servicios básicos, la propiedad y el control de la tierra y otros bienes, la herencia, los recursos naturales, las nuevas tecnologías apropiadas y los servicios financieros, incluida la microfinanciación\",\n  \"De aquí a 2030, fomentar la resiliencia de los pobres y las personas que se encuentran en situaciones de vulnerabilidad y reducir su exposición y vulnerabilidad a los fenómenos extremos relacionados con el clima y otras perturbaciones y desastres económicos, sociales y ambientales \",\n  \"Garantizar una movilización significativa de recursos procedentes de diversas fuentes, incluso mediante la mejora de la cooperación para el desarrollo, a fin de proporcionar medios suficientes y previsibles a los países en desarrollo, en particular los países menos adelantados, para que implementen programas y políticas encaminados a poner fin a la pobreza en todas sus dimensiones\",\n  \"Crear marcos normativos sólidos en los planos nacional, regional e internacional, sobre la base de estrategias de desarrollo en favor de los pobres que tengan en cuenta las cuestiones de género, a fin de apoyar la inversión acelerada en medidas para erradicar la pobreza\",\n  \"De aquí a 2030, poner fin al hambre y asegurar el acceso de todas las personas, en particular los pobres y las personas en situaciones de vulnerabilidad, incluidos los niños menores de 1 año, a una alimentación sana, nutritiva y suficiente durante todo el año\",\n  \"De aquí a 2030, poner fin a todas las formas de malnutrición, incluso logrando, a más tardar en 2025, las metas convenidas internacionalmente sobre el retraso del crecimiento y la emaciación de los niños menores de 5 años, y abordar las necesidades de nutrición de las adolescentes, las mujeres embarazadas y lactantes y las personas de edad\",\n  \"De aquí a 2030, duplicar la productividad agrícola y los ingresos de los productores de alimentos en pequeña escala, en particular las mujeres, los pueblos indígenas, los agricultores familiares, los ganaderos y los pescadores, entre otras cosas mediante un acceso seguro y equitativo a las tierras, a otros recursos e insumos de producción y a los conocimientos, los servicios financieros, los mercados y las oportunidades para añadir valor y obtener empleos no agrícolas \",\n  \"De aquí a 2030, asegurar la sostenibilidad de los sistemas de producción de alimentos y aplicar prácticas agrícolas resilientes que aumenten la productividad y la producción, contribuyan al mantenimiento de los ecosistemas, fortalezcan la capacidad de adaptación al cambio climático, los fenómenos meteorológicos extremos, las sequías, las inundaciones y otros desastres, y mejoren progresivamente la calidad de la tierra y el suelo\",\n  \"De aquí a 2020, mantener la diversidad genética de las semillas, las plantas cultivadas y los animales de granja y domesticados y sus correspondientes especies silvestres, entre otras cosas mediante una buena gestión y diversificación de los bancos de semillas y plantas a nivel nacional, regional e internacional, y promover el acceso a los beneficios que se deriven de la utilización de los recursos genéticos y los conocimientos tradicionales conexos y su distribución justa y equitativa, según lo convenido internacionalmente\",\n  \"Aumentar, incluso mediante una mayor cooperación internacional, las inversiones en infraestructura rural, investigación y servicios de extensión agrícola, desarrollo tecnológico y bancos de genes de plantas y ganado a fin de mejorar la capacidad de producción agropecuaria en los países en desarrollo, particularmente en los países menos adelantados\",\n  \"Corregir y prevenir las restricciones y distorsiones comerciales en los mercados agropecuarios mundiales, incluso mediante la eliminación paralela de todas las formas de subvención a las exportaciones agrícolas y todas las medidas de exportación con efectos equivalentes, de conformidad con el mandato de la Ronda de Doha para el Desarrollo\",\n  \"Adoptar medidas para asegurar el buen funcionamiento de los mercados de productos básicos alimentarios y sus derivados y facilitar el acceso oportuno a la información sobre los mercados, incluso sobre las reservas de alimentos, a fin de ayudar a limitar la extrema volatilidad de los precios de los alimentos\",\n  \"De aquí a 2030, reducir la tasa mundial de mortalidad materna a menos de 70 por cada 100.000 nacidos vivos\",\n  \"De aquí a 2030, poner fin a las muertes evitables de recién nacidos y de niños menores de 5 años, logrando que todos los países intenten reducir la mortalidad neonatal al menos a 12 por cada 1.000 nacidos vivos y la mortalidad de los niños menores de 5 años al menos a 25 por cada 1.000 nacidos vivos\",\n  \"De aquí a 2030, poner fin a las epidemias del SIDA, la tuberculosis, la malaria y las enfermedades tropicales desatendidas y combatir la hepatitis, las enfermedades transmitidas por el agua y otras enfermedades transmisibles\",\n  \"De aquí a 2030, reducir en un tercio la mortalidad prematura por enfermedades no transmisibles mediante su prevención y tratamiento, y promover la salud mental y el bienestar\",\n  \"Fortalecer la prevención y el tratamiento del abuso de sustancias adictivas, incluido el uso indebido de estupefacientes y el consumo nocivo de alcohol\",\n  \"De aquí a 2020, reducir a la mitad el número de muertes y lesiones causadas por accidentes de tráfico en el mundo\",\n  \"De aquí a 2030, garantizar el acceso universal a los servicios de salud sexual y reproductiva, incluidos los de planificación familiar, información y educación, y la integración de la salud reproductiva en las estrategias y los programas nacionales\",\n  \"Lograr la cobertura sanitaria universal, incluida la protección contra los riesgos financieros, el acceso a servicios de salud esenciales de calidad y el acceso a medicamentos y vacunas inocuos, eficaces, asequibles y de calidad para todos\"\n]\n}\n\n\n\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/c/loadCorpus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"c",
+						"loadCorpus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadFileCsv",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file_csv",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/uploadFileCsv",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"uploadFileCsv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Compound Word",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sentence\":\"cursos de formación sobre cambio climático\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/testCompoundWord",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"testCompoundWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBeliefs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\": {}\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/deleteBeliefs",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"deleteBeliefs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Belief From Compound Word",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/createBeliefFromCompoundWord",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"createBeliefFromCompoundWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Compound Words",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/resetCompoundWords",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"resetCompoundWords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Relation Compose",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/createRelationCompose",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"createRelationCompose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Backup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/backup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"backup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setBeliefs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/setBelief",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"setBelief"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InputText",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"descripcion\":\"En américa encontramos muchas mujeres en edad de procrear naturalmente, esto es claro teniendo altos indices de  mujeres embarazadas en el pais Asentamientos humanos Asistencia oficial para el dearrollo Asistencia para el desarrollo Aumentar la eficacia de las instituciones  Cambio climático Consumo material interno en términos absolutos Convención marco de las naciones unidas sobre el cambio climático Crecimiento infantil Diversidad biológica\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/inputText",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"inputText"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkRelationCompose",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/checkRelationCompose",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"checkRelationCompose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkRelationComposeODStoWord",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ngrams\":[\"Cambio climático\",\n\"Mortalidad materna\",\n\"PIB laboral\",\n\"Polo Norte\",\n\"Prevalencia de inseguridad\",\n\"Prevalencia de la mal nutrición\",\n\"Servicios básicos\",\n\"Servicios públicos asequibles\",\n\"Transporte para discapacitados\",\n\"Transporte seguro\",\n\"Transporte sostenible\",\n\"ablación genital femenina\",\n\"abuso sexual infantil\",\n\"acceso a alimentos\",\n\"acceso a cuidado de la salud\",\n\"acceso a electricidad\",\n\"acceso a internet\",\n\"acceso a la comida\",\n\"acceso a la energía\",\n\"acceso a la justicia\",\n\"acceso a la red\",\n\"acceso a la salud\",\n\"acceso a las medicinas\",\n\"acceso a letrinas\",\n\"acceso a los medicamentos\",\n\"acceso a los médicos\",\n\"acceso a medicamentos\",\n\"acceso a medicamentos y vacunas\",\n\"acceso a servicios de saneamiento\",\n\"acceso a un abogado\",\n\"acceso a un aseo\",\n\"acceso a un baño\",\n\"acceso a un hospital\",\n\"acceso a un medico\",\n\"acceso a un médico\",\n\"acceso a vacunas\",\n\"acceso al agua limpia\",\n\"acceso al aseo\",\n\"acceso al baño\",\n\"acceso al empleo\",\n\"acceso asequible\",\n\"acceso equitativo\",\n\"acceso legal\",\n\"acceso medico\",\n\"acceso médico\",\n\"acceso público a la información\",\n\"acceso universal\",\n\"accidente en el oficio\",\n\"accidente laboral\",\n\"accidentes de tráfico\",\n\"accidentes de tránsito\",\n\"accidentes en el oficio\",\n\"acondicionamiento de edificios\",\n\"acoso laboral\",\n\"acoso sexual\",\n\"actividades de adaptación\",\n\"actividades de investigación\",\n\"actividades de mitigación\",\n\"actividades productivas\",\n\"adaptación al cambio climático\",\n\"adaptación y mitigación\",\n\"administrar mal\",\n\"adquirir conocimientos\",\n\"adultos mayores\",\n\"afectados por conflictos\",\n\"agricultura productiva\",\n\"agricultura productiva y sostenible\",\n\"agricultura sostenible\",\n\"agua contaminada\",\n\"agua dulce\",\n\"agua esta contaminada\",\n\"agua está contaminada\",\n\"agua no potable\",\n\"agua potable\",\n\"aguas residuales\",\n\"alimentos seguros\",\n\"alimentos sostenibles\",\n\"altas cuotas escolares\",\n\"altas matrículas\",\n\"alud de tierra\",\n\"ampliación del transporte público\",\n\"apoyo a discapacitados\",\n\"apoyo al desempleado\",\n\"apoyo durante el desempleo\",\n\"apoyo financiero\",\n\"apoyo financiero para el cambio climático\",\n\"apoyo tecnológico\",\n\"apoyo técnico\",\n\"aprendizaje de calidad\",\n\"aprendizaje y bienestar\",\n\"asegurar la conservación\",\n\"asentamientos informales\",\n\"asistencia financiera\",\n\"asistencia oficial\",\n\"asistencia oficial para la conservación\",\n\"asistencia social\",\n\"atención de la salud reproductiva\",\n\"atención de salud decente\",\n\"atención de salud deficiente\",\n\"atención sanitaria\",\n\"aumento de diabetes\",\n\"aumento de la diabetes\",\n\"aumento de la temperatura\",\n\"aumento de las temperaturas\",\n\"aumento del salario mínimo\",\n\"ausencia de baños\",\n\"ayuda para mi\",\n\"ayuda por desempleo\",\n\"bache en el camino\",\n\"baches en el camino\",\n\"baches en la carretera\",\n\"baja remuneración\",\n\"bajo salario\",\n\"bajos salarios\",\n\"banco comercial\",\n\"banco mundial\",\n\"bandas criminales\",\n\"basada en la comunidad\",\n\"basura de la casa\",\n\"becas disponibles\",\n\"beneficios de desempleo\",\n\"beneficios por incapacidad\",\n\"bienes materiales\",\n\"bienestar humano\",\n\"bienestar psicosocial\",\n\"biodiversidad en la planificación\",\n\"buen aprendizaje\",\n\"buen colegio\",\n\"buen hospital\",\n\"buena educacion\",\n\"buena educación\",\n\"buena escuela\",\n\"buena profesora\",\n\"buena universidad\",\n\"buenas escuelas\",\n\"buenas oportunidades de empleo\",\n\"buenos profesores\",\n\"buenos programas de educación\",\n\"cadenas de producción\",\n\"cadenas de valor\",\n\"cadenas productivas\",\n\"calentamiento global\",\n\"calidad de vida\",\n\"calidad del aire\",\n\"calidad del hospital\",\n\"calidad del sistema de salud\",\n\"cambio climático\",\n\"camino lleno de baches\",\n\"caminos llenos de baches\",\n\"campaña de seguridad vial\",\n\"campañas sobre cambio climático\",\n\"capacidad de adaptación al cambio climático\",\n\"capacidad de mitigación del cambio climático\",\n\"capacidad para la planificación urbana\",\n\"cargo por emisiones\",\n\"carretera en horrible estado\",\n\"carretera peligrosa\",\n\"carreteras mejoradas\",\n\"catástrofe natural\",\n\"celular es costoso\",\n\"celular es demasiado cara\",\n\"centros de salud\",\n\"ciudades sostenibles\",\n\"clase media\",\n\"cobertura sanitaria universal\",\n\"cobrar el paro\",\n\"colegio profesional\",\n\"comercio de carbono\",\n\"comida barata y poco saludable\",\n\"comida no saludable disponible\",\n\"comida nutritiva\",\n\"comida nutritiva asequible\",\n\"comida nutritiva disponible\",\n\"comida nutritiva mas barata\",\n\"comida nutritiva más barata\",\n\"comida saludable disponible\",\n\"comida saludable es cara\",\n\"comida saludable es muy\",\n\"comida saludable no es asequible\",\n\"comida sana asequible\",\n\"comida sana mas barata\",\n\"comida sana más barata\",\n\"comida sana y barata\",\n\"competencias TIC\",\n\"compra masiva de tierra\",\n\"comprar carbón\",\n\"comprar gas\",\n\"comprar su voto\",\n\"comprar un voto\",\n\"compromiso ciudadano\",\n\"conciencia de la seguridad vial\",\n\"conciencia pública sobre cambio climático\",\n\"conciencia sobre cambio climático\",\n\"condiciones climáticas extremas\",\n\"condición indígena\",\n\"conexión de internet\",\n\"conexión lenta\",\n\"conexión mala\",\n\"conflicto armado\",\n\"conocimientos de sostenibilidad\",\n\"conocimientos pertinentes\",\n\"conseguí empleo\",\n\"conservación de ecosistemas\",\n\"conservación de ecosistemas terrestres\",\n\"conservación de la montaña\",\n\"conservación de zonas marinas\",\n\"conservación del suelo\",\n\"construcción sostenible\",\n\"consumo de alcohol\",\n\"consumo material\",\n\"consumo material interno por PIB\",\n\"consumo responsable\",\n\"consumo sostenible\",\n\"consumo y producción sostenible\",\n\"contaminación de hogares\",\n\"contaminación del agua\",\n\"contaminación del aire\",\n\"contaminación del suelo\",\n\"contaminación por actividades en tierra\",\n\"control de la tierra\",\n\"control del tabaco\",\n\"cooperación científica para los oceanos\",\n\"cooperación para la arquitectura sostenible\",\n\"corredor vial\",\n\"costo de carbono\",\n\"costo de datos móviles\",\n\"costo de la comida nutritiva\",\n\"costo de la comida sana\",\n\"costo de la universidad\",\n\"costo de las emisiones\",\n\"costo del celular\",\n\"costo del servicio móvil\",\n\"costo del wi-fi\",\n\"costos de internet\",\n\"costos del wi-fi\",\n\"creación de empleo\",\n\"crecimiento de microempresas\",\n\"crecimiento económico\",\n\"crecimiento infantil\",\n\"crisis económica\",\n\"crisis financiera\",\n\"crudo invierno\",\n\"crédito de carbono\",\n\"créditos asequibles\",\n\"créditos de carbono\",\n\"cuidado de salud universal\",\n\"cuidar a\",\n\"cultura de la sostenibilidad\",\n\"cultura de los pueblos\",\n\"cultura de paz\",\n\"cultura local\",\n\"cuotas escolares altas\",\n\"cuotas escolares asequibles\",\n\"cuotas escolares iguales\",\n\"dar de alta\",\n\"datos móviles asequible\",\n\"datos móviles es muy costoso\",\n\"datos móviles no asequible\",\n\"datos móviles son costosos\",\n\"datos móviles son muy costosos\",\n\"de niño\",\n\"debajo del salario mínimo\",\n\"defecación al aire libre\",\n\"delincuencia organizada\",\n\"denuncia de irregularidades\",\n\"denuncias por violencia\",\n\"derecho al empleo\",\n\"derecho al voto\",\n\"derecho laboral\",\n\"derechos de los trabajadores\",\n\"derechos humanos\",\n\"derechos laborales\",\n\"derechos legales\",\n\"derechos reproductivos\",\n\"derechos seguros\",\n\"desarrollo adecuado\",\n\"desarrollo bajo en carbono\",\n\"desarrollo de investigación y la innovación\",\n\"desarrollo de medicamentos\",\n\"desarrollo de tecnología\",\n\"desarrollo de tecnologías\",\n\"desarrollo de vacunas\",\n\"desarrollo económico\",\n\"desarrollo regional\",\n\"desarrollo sostenible\",\n\"desarrollo sustentable\",\n\"desarrollo urbano\",\n\"desastre ambiental\",\n\"desastre ambientales\",\n\"desastre natural\",\n\"desastre naturales\",\n\"desastre social\",\n\"desastres ambientales\",\n\"desastres económicos\",\n\"desastres naturales\",\n\"desastres sociales\",\n\"desechos peligrosos\",\n\"desechos químicos\",\n\"desechos sólidos urbanos\",\n\"desechos tóxicos\",\n\"deserción escolar\",\n\"desperdicio de alimentos\",\n\"despojo de tierra\",\n\"detener la deforestación\",\n\"detener la perdida de biodiversidad\",\n\"diabetes reducida\",\n\"dificultad para encontrar empleo\",\n\"dificultades para encontrar empleo\",\n\"difícil de encontrar empleo\",\n\"digno de confianza\",\n\"dinero sucio\",\n\"discriminacion contra\",\n\"discriminacion de genero\",\n\"discriminacion de género\",\n\"discriminacion por edad\",\n\"discriminacion por enfermedad mental\",\n\"discriminacion racial\",\n\"discriminación contra\",\n\"discriminación de genero\",\n\"discriminación de género\",\n\"discriminación por edad\",\n\"discriminación por enfermedad mental\",\n\"discriminación racial\",\n\"discriminar contra\",\n\"disparidades de genero\",\n\"disparidades de genero en la educación\",\n\"disparidades de género en la educación\",\n\"disponibilidad de comida\",\n\"diversidad alimentaria\",\n\"diversidad cultural\",\n\"diversificación industrial\",\n\"don nadie\",\n\"economia campesina\",\n\"economía del turismo\",\n\"economía naranja\",\n\"economía urbana\",\n\"ecosistemas en la planificación\",\n\"ecosistemas terrestres\",\n\"edificios eficientes\",\n\"edificios sostenibles\",\n\"educacion básica\",\n\"educacion universal\",\n\"educación accesible\",\n\"educación de calidad\",\n\"educación deportiva\",\n\"educación inaccesible\",\n\"educación para el cambio climático\",\n\"educación para el desarrollo sostenible\",\n\"educación para la sostenibilidad\",\n\"educación para todos\",\n\"educación preescolar\",\n\"educación primaria\",\n\"educación privada\",\n\"educación pública\",\n\"educación secundaria\",\n\"educación sexual\",\n\"educación sobre cambio climático\",\n\"educación superior\",\n\"educación terciaria\",\n\"educación universal\",\n\"efectos del desarrollo sostenible\",\n\"el acceso a un abogado\",\n\"el aumento del nivel de los oceanos\",\n\"el aumento del nivel de los océanos\",\n\"el peor tráfico\",\n\"el salario no es suficiente\",\n\"el tráfico esta mejor\",\n\"eleccion libre\",\n\"eleccion real\",\n\"eleccion verdadera\",\n\"elecciones reales\",\n\"elección libre\",\n\"elección real\",\n\"elección verdadera\",\n\"eliminación de discriminación\",\n\"eliminar corredores de remesas\",\n\"eliminar disparidades\",\n\"embarazo adolecente\",\n\"emergencia en desempleo\",\n\"emisiones de carbono\",\n\"emisiones de gases\",\n\"empleo de jóvenes\",\n\"empleo del turismo\",\n\"empleo informal\",\n\"empleo pleno\",\n\"empleo productivo\",\n\"empresas sostenibles\",\n\"en cinta\",\n\"en paro\",\n\"encontrar un medico\",\n\"encontrar un médico\",\n\"energía asequible\",\n\"energía limpia\",\n\"energía primaria\",\n\"energía renovable\",\n\"energía solar\",\n\"energía sustentable\",\n\"enfermedad mental\",\n\"enfermedad por agua contaminada\",\n\"enfermedades de transmisión sexual\",\n\"enfermedades no transmisibles\",\n\"enfermedades por agua contaminada\",\n\"enfermedades por productos químicos\",\n\"enfermedades respiratorias\",\n\"enfermedades transmisibles\",\n\"enfoque basado en el ecosistema\",\n\"enseñanza de calidad\",\n\"enseñanza de las ciencias\",\n\"enseñanza gratuita\",\n\"enseñanza primaria\",\n\"enseñanza secundaria\",\n\"entidades bancarias\",\n\"entornos de aprendizaje seguro\",\n\"equidad en el acceso a la justicia\",\n\"erradicar la pobreza\",\n\"escasez de agua\",\n\"escasez de medicamentos\",\n\"escasez de medicinas\",\n\"escuela asequible\",\n\"escuela barata\",\n\"escuela cara\",\n\"escuela de calidad\",\n\"escuela más barata\",\n\"escuelas asequibles\",\n\"escuelas de calidad\",\n\"escuelas ecológicas\",\n\"escuelas para la sostenibilidad\",\n\"espacio público\",\n\"espacios públicos\",\n\"estaciones de datos para el monitoreo y la conservación\",\n\"estación piscícola\",\n\"estado de derecho\",\n\"estilos de vida en armonía con la naturaleza\",\n\"estrategias de turismo sostenible\",\n\"estrategias nacionales sobre cambio climático\",\n\"eventos sobre cambio climático\",\n\"excelente educación\",\n\"excelentes escuelas\",\n\"excelentes programas de educación\",\n\"excelentes universidades\",\n\"expansión urbana\",\n\"explotacion de los trabajadores\",\n\"explotación de los trabajadores\",\n\"explotación sexual\",\n\"falta de agua\",\n\"falta de baños\",\n\"falta de higiene\",\n\"falta de saneamiento\",\n\"fecundidad adolescentes\",\n\"fenómenos extremos\",\n\"fin del maltrato infantil\",\n\"fin del mundo\",\n\"finanzas del delito\",\n\"flujo de capital\",\n\"fondos del estado\",\n\"fondos públicos\",\n\"forma de violencia\",\n\"formación de docentes\",\n\"formación profesional\",\n\"formación sobre cambio climático\",\n\"formalización de microempresas\",\n\"formalizar tendencia de tierra\",\n\"fuentes renovables\",\n\"funcionarios público\",\n\"ganar suficiente dinero\",\n\"gasto público\",\n\"gastos sanitarios\",\n\"gestión del agua\",\n\"gestión del cambio climático\",\n\"gestión del riesgo de desastres\",\n\"gestión ecológica de productos químicos\",\n\"gestión para el cambio climático\",\n\"gestión sostenible\",\n\"gestión sostenible del bosque\",\n\"gobierno corrupto\",\n\"gobierno democrático\",\n\"gobiernos incluyentes\",\n\"gobiernos locales\",\n\"gran aprendizaje\",\n\"gran educación\",\n\"gran escuela\",\n\"gran profesora\",\n\"gran universidad\",\n\"grandes empresas sostenibles\",\n\"grandes escuelas\",\n\"grandes profesores\",\n\"grandes universidades\",\n\"hacer efecto\",\n\"hacer responsable\",\n\"hambre en el mundo\",\n\"hombres pobres\",\n\"hospital decente\",\n\"hospital deficiente\",\n\"hueco en la carretera\",\n\"huecos en la carretera\",\n\"huella de carbono\",\n\"huella ecológica\",\n\"huella material\",\n\"huella material por PIB\",\n\"huellas de carbono\",\n\"igualdad de genero\",\n\"igualdad de oportunidades\",\n\"igualdad de remuneración\",\n\"igualdad en educación\",\n\"igualdad en la universidad\",\n\"impacto ambiental\",\n\"incentivos para la reforestación\",\n\"incidencia de diabetes\",\n\"incidencia de la enfermedad del corazón\",\n\"incidencia de la malaria\",\n\"incidencia de la tuberculosis\",\n\"incidencia de las enfermedades crónicas\",\n\"incidencia de las enfermedades del corazón\",\n\"inclusión social\",\n\"industria sostenible\",\n\"industrialización inclusiva\",\n\"industrialización sostenible\",\n\"industrias sostenibles\",\n\"infecciones por el VIH\",\n\"información disponible para el desarrollo sostenible\",\n\"infraestructura educativa\",\n\"infraestructura rural\",\n\"infraestructura sostenible\",\n\"infraestructura vial\",\n\"infraestructura y materiales para estudiantes con discapacidad\",\n\"infraestructuras regionales\",\n\"infraestructuras sostenibles\",\n\"ingreso medio\",\n\"ingreso nacional bruto\",\n\"ingresos para discapacitados\",\n\"inseguridad alimentaria\",\n\"inseguridad respecto a la comida\",\n\"institución financiera\",\n\"institución pública corrupta\",\n\"instituto de investigación\",\n\"instituto universitario\",\n\"instrumentos de planificación ambiental\",\n\"internet asequible\",\n\"internet con fines pedagógicos\",\n\"internet costoso\",\n\"internet es costoso\",\n\"internet es muy costoso\",\n\"internet lenta\",\n\"internet lento\",\n\"internet no asequible\",\n\"internet no es asequible\",\n\"inversión privada\",\n\"investigación agrícola\",\n\"investigación científica\",\n\"investigación científica para la conservación de oceanos\",\n\"investigación para la sostenibilidad\",\n\"investigación y desarrollo\",\n\"jovenes y adultos\",\n\"jovenes y adultos competentes\",\n\"justicia corrupta\",\n\"justicia para\",\n\"jóvenes empleados\",\n\"jóvenes sin capacitación\",\n\"jóvenes sin estudios\",\n\"jóvenes y adultos\",\n\"jóvenes y adultos competentes\",\n\"la comida nutritiva no es asequible\",\n\"la comida sana no es asequible\",\n\"lavado de manos\",\n\"legitimidad de las instituciones\",\n\"libertad de asociación\",\n\"libertad de voto\",\n\"libertad política\",\n\"libertades de voto\",\n\"libertades políticas\",\n\"los gay\",\n\"lucha contra la desertificación\",\n\"luz eléctrica\",\n\"línea de crédito\",\n\"línea de pobreza\",\n\"mal aprendizaje\",\n\"mal colegio\",\n\"mal servicio de salud\",\n\"mal servicio medico\",\n\"mal servicio médico\",\n\"mal uso\",\n\"mal utilizado\",\n\"mal utilizar\",\n\"mala administracion\",\n\"mala administración\",\n\"mala conexión\",\n\"mala educación\",\n\"mala gestión\",\n\"mala nutrición\",\n\"mala profesora\",\n\"mala red\",\n\"mala sistema de salud\",\n\"mala universidad\",\n\"malas condiciones de la carretera\",\n\"malas condiciones de la vía\",\n\"malas escuelas\",\n\"malla vial\",\n\"malos profesores\",\n\"malos servicios de salud\",\n\"mano de obra\",\n\"marco jurídico\",\n\"mas caliente\",\n\"mas empleo\",\n\"materiales locales para la construcción\",\n\"matrimonio gay\",\n\"matrimonio infantil\",\n\"mecanismos de comercialización\",\n\"mecanismos de desarrollo par ala planificación\",\n\"medianas empresas\",\n\"medicamentos asequibles\",\n\"medicamentos baratos\",\n\"medicinas asequibles\",\n\"medicinas caras\",\n\"medico disponible\",\n\"medidas de mitigación\",\n\"medio ambiente\",\n\"medio de transporte\",\n\"mejor aprendizaje\",\n\"mejor atención de salud\",\n\"mejor carretera\",\n\"mejor educación\",\n\"mejor empleo\",\n\"mejor escuela\",\n\"mejor profesora\",\n\"mejor universidad\",\n\"mejorar la seguridad vial\",\n\"mejorar las carreteras\",\n\"mejores carreteras\",\n\"mejores condiciones de las carreteras\",\n\"mejores escuelas\",\n\"mejores profesores\",\n\"mejores programas de educación\",\n\"mejores servicios de salud\",\n\"mejores universidades\",\n\"menos empleo\",\n\"menos empleos\",\n\"mercados agropecuarios\",\n\"merecemos mejores carreteras\",\n\"merecemos nuevas carreteras\",\n\"metas de adaptación y mitigación\",\n\"metas nacionales de diversidad\",\n\"mismo sexo\",\n\"mitigación del cambio climático\",\n\"mitigar el cambio climático\",\n\"modernización tecnológica\",\n\"mortalidad infantil\",\n\"mortalidad materna\",\n\"mortalidad por lesiones\",\n\"movilidad sostenible\",\n\"muertos por desastres naturales\",\n\"mutilación genital femenina\",\n\"médico disponible\",\n\"médicos disponibles\",\n\"naciones unidas\",\n\"necesidades de planificación\",\n\"necesitamos mas carreteras\",\n\"necesitamos mejores carreteras\",\n\"necesitamos más carreteras\",\n\"necesitamos nuevas carreteras\",\n\"necesitan justicia\",\n\"nivel de carbono\",\n\"nivel del mar\",\n\"nivel global del mar\",\n\"nivel mínimo de competencias\",\n\"niveles de carbono\",\n\"niveles de enseñanza\",\n\"niveles del mar\",\n\"no comercial\",\n\"no hay aseo\",\n\"no hay baño\",\n\"no hay baños\",\n\"no hay buenos empleos\",\n\"no hay comida sana\",\n\"no paga lo suficiente\",\n\"no paga mucho\",\n\"no puede conseguir empleo\",\n\"no puede trabajar\",\n\"no pueden trabajar\",\n\"no puedo encontrar empleo\",\n\"no saludable\",\n\"no tiene educación\",\n\"no transmisibles\",\n\"no violencia\",\n\"normas de seguridad\",\n\"nueva carretera\",\n\"nuevas carreteras\",\n\"odio racial\",\n\"ola de calor\",\n\"oportunidad de empleo\",\n\"oportunidades de empleo\",\n\"oportunidades de subsistencia sostenible\",\n\"oportunidades profesionales\",\n\"orientación agrícola\",\n\"orientación sexual\",\n\"oro negro\",\n\"pagar carbón\",\n\"pagar datos móviles\",\n\"pagar el celular\",\n\"pagar energía\",\n\"pagar internet\",\n\"pagar la atención de salud\",\n\"pagar las medicinas\",\n\"pagar los medicamentos\",\n\"pagar un seguro medico\",\n\"pagar wi-fi\",\n\"para todo tiempo\",\n\"parque nacional\",\n\"parque natural nacional\",\n\"participa en\",\n\"participación ciudadana\",\n\"participación de adultos\",\n\"participación de jovenes y adultos\",\n\"participación de jóvenes\",\n\"participación de jóvenes y adultos\",\n\"participación de la comunidad\",\n\"participación en el aprendizaje\",\n\"participar en\",\n\"participaron en\",\n\"patios productivos\",\n\"patrimonio natural\",\n\"país desarrollado\",\n\"países en desarrollo\",\n\"pensión por desempleo\",\n\"peor aprendizaje\",\n\"peor educación\",\n\"peor escuela\",\n\"peor profesora\",\n\"peor tráfico\",\n\"peor universidad\",\n\"pequeñas empresas\",\n\"pequeñas industrias\",\n\"perdida de bosque natural\",\n\"perdida de la biodiversidad\",\n\"perdida del empleo\",\n\"perdidas de alimentos en las ventas al por menor\",\n\"perdidas en campo\",\n\"perdió su empleo\",\n\"pesca ilegal\",\n\"placa huella\",\n\"planes de acción\",\n\"planes nacionales sobre cambio climático\",\n\"planificación ambiental\",\n\"planificación para el cambio climático\",\n\"planificación territorial\",\n\"poblaciones de peces\",\n\"población adulta\",\n\"población con gastos sanitarios\",\n\"población rural\",\n\"pobreza extrema\",\n\"pobreza multidimensional\",\n\"pocas oportunidades de empleo\",\n\"poder comprar alimentos\",\n\"poder comprar comida\",\n\"poder comprar comida no saludable\",\n\"poder comprar comida nutritiva\",\n\"poder comprar comida sana\",\n\"poder hacer mercado\",\n\"poder pagar el medico\",\n\"poder pagar el médico\",\n\"poder pagar las medicinas\",\n\"policia corrupta\",\n\"polución marina\",\n\"política nacional de cambio climático\",\n\"políticas de inclusión\",\n\"políticas de turismo sostenible\",\n\"poner atención al clima\",\n\"por debajo del salario mínimo\",\n\"precio de alimentos\",\n\"precio de datos móviles\",\n\"precio de educación\",\n\"precio de la carne\",\n\"precio de la comida nutritiva\",\n\"precio de la comida sana\",\n\"precio de la escuela\",\n\"precio de las emisiones\",\n\"precio de las escuelas\",\n\"precio de las medicinas\",\n\"precio de los alimentos\",\n\"precio de los medicamentos\",\n\"precio de los vegetales\",\n\"precio del carbono\",\n\"precio del internet\",\n\"precio del servicio móvil\",\n\"precio del wi-fi\",\n\"precios de alimentos\",\n\"precios de datos móviles\",\n\"precios de internet\",\n\"precios del servicio móvil\",\n\"precios del wi-fi\",\n\"predio de internet\",\n\"prevencion y tratamiento\",\n\"prevención de riesgos naturales\",\n\"prevención y tratamiento\",\n\"prevenir contaminación marina\",\n\"primera infancia\",\n\"problemas para conseguir empleo\",\n\"problemas para encontrar empleo\",\n\"procesos limpios\",\n\"producción local\",\n\"producción más sostenible\",\n\"producción sostenible\",\n\"productividad agrícola\",\n\"productividad de los oceanos\",\n\"productividad económica\",\n\"producto interno bruto\",\n\"productores de alimentos\",\n\"productos básicos\",\n\"productos ilegales de flora y fauna\",\n\"productos químicos\",\n\"profesorado de educación\",\n\"profesores de calidad\",\n\"programas de enseñanza superior\",\n\"programas de formación profesional\",\n\"programas educativos para el cambio climático\",\n\"programas técnicos\",\n\"promoción de la cultura local\",\n\"promoción del consumo local\",\n\"promover la cultura\",\n\"promover los productos locales\",\n\"propiedad de la comunidad\",\n\"prostitución infantil\",\n\"protección a comunidades afectadas\",\n\"protección a comunidades vulnerables\",\n\"protección a pobres\",\n\"protección de ecosistemas terrestres\",\n\"protección de flora y fauna\",\n\"protección de zonas marinas\",\n\"protección financiera frente a desastres\",\n\"protección pública\",\n\"protección social\",\n\"proteger los bosques\",\n\"proyecto productivo\",\n\"proyecto territorial de adaptación y mitigación\",\n\"proyectos productivos\",\n\"práctica sostenible\",\n\"préstamo estudiantil\",\n\"pueblos indigenas\",\n\"pueblos indígenas\",\n\"purificación de agua\",\n\"pérdida de peso\",\n\"pérdida del empleo\",\n\"pérdidas económicas\",\n\"queremos mejores carreteras\",\n\"queremos nuevas carreteras\",\n\"quieren justicia\",\n\"recolección de agua\",\n\"recortes sociales\",\n\"recuperación de los activos robados\",\n\"red móvil\",\n\"reducción de efectos\",\n\"reducción de efectos del cambio climático\",\n\"reducción de emisiones\",\n\"reducción de pobreza\",\n\"reducción de riesgo\",\n\"reducción de riesgo a desastres\",\n\"reducción del desperdicio\",\n\"reducción del riesgo\",\n\"reducción salarial\",\n\"reducir contaminación marina\",\n\"reducir formas de violencia\",\n\"reducir la diabetes\",\n\"reducir la pobreza\",\n\"reducir muertes relacionadas con conflictos\",\n\"reducir perdidas económicas\",\n\"registro de nacimiento\",\n\"relaciones sexuales\",\n\"relleno sanitario\",\n\"rendir cuentas a los ciudadanos\",\n\"reserva ecológica\",\n\"reserva natural\",\n\"reservas de alimentos\",\n\"residuos de la casa\",\n\"residuos de las casas\",\n\"residuos del hogar\",\n\"residuos peligrosos\",\n\"residuos químicos\",\n\"residuos sólidos\",\n\"resiliencia a riesgos climáticos\",\n\"resiliencia al clima\",\n\"resultados de aprendizaje\",\n\"riesgo de desastres\",\n\"riesgo de salud\",\n\"riesgo natural\",\n\"riesgo relacionados con el clima\",\n\"riesgos climáticos\",\n\"salario bajo\",\n\"salario mínimo\",\n\"salud asequibles\",\n\"salud del oceano\",\n\"salud mental\",\n\"salud mental y bienestar\",\n\"salud mundial\",\n\"salud pública\",\n\"salud reproductiva\",\n\"salud sexual\",\n\"salud sexual y reproductiva\",\n\"salud universal\",\n\"saneamiento deficiente\",\n\"saneamiento e higiene\",\n\"saneamiento para el lavado de manos\",\n\"saneamiento por sexo\",\n\"satisfacción con los servicios públicos\",\n\"sector agricola\",\n\"sector agrícola\",\n\"sector del turismo\",\n\"sector del turismo sostenible\",\n\"secuestro de carbono\",\n\"seguridad alimentaria\",\n\"seguridad de los trabajadores\",\n\"seguridad del trabajador\",\n\"seguridad jurídica\",\n\"seguridad pública\",\n\"seguridad social\",\n\"seguridad vial\",\n\"seguro de salud asequible\",\n\"sensibilización al cambio climático\",\n\"sensibilización de públicos sobre cambio climático\",\n\"sensibilización sobre cambio climático\",\n\"servicio celular muy costoso\",\n\"servicio de agua\",\n\"servicio de salud gratuito\",\n\"servicio energético\",\n\"servicio energético moderno\",\n\"servicio energético sostenible\",\n\"servicio medico mejorado\",\n\"servicio médico mejorado\",\n\"servicio móvil costoso\",\n\"servicio móvil muy costoso\",\n\"servicios básicos\",\n\"servicios básicos adecuados\",\n\"servicios de atención\",\n\"servicios de desarrollo\",\n\"servicios de higiene\",\n\"servicios de rehabilitación\",\n\"servicios de salud\",\n\"servicios de salud sexual y reproductiva\",\n\"servicios de saneamiento\",\n\"servicios de seguros\",\n\"servicios públicos\",\n\"sillas de ruedas\",\n\"sin acceso a las universidades\",\n\"sin combustible para cocinar\",\n\"sin electricidad\",\n\"sin energía\",\n\"sin luz\",\n\"sistema de salud decente\",\n\"sistema de salud deficiente\",\n\"situaciones vulnerables\",\n\"sostenibilidad ambiental\",\n\"suministro de agua potable\",\n\"súper alimento\",\n\"tamaño de la producción\",\n\"tasa de crecimiento\",\n\"tasa de desempleo\",\n\"tasa de fecundidad\",\n\"tasa de mortalidad\",\n\"tasa de mortalidad materna\",\n\"tecnología avanzada\",\n\"tecnología de la información y las comunicaciones\",\n\"tecnología ecológica\",\n\"tecnología limpia\",\n\"tecnología para consumo sostenible\",\n\"tecnologías ecológicas\",\n\"tecnologías limpias\",\n\"tecnologías para producción sostenible\",\n\"temporada de invierno\",\n\"temporada de sequía\",\n\"tendencia de tierra\",\n\"tenía electricidad\",\n\"tercera edad\",\n\"tiene electricidad\",\n\"tienen electricidad\",\n\"tierras afectadas\",\n\"tipo de explotación\",\n\"tortura infantil\",\n\"trabajadores explotados\",\n\"trabajadores migrantes\",\n\"trabajando en condiciones peligrosas\",\n\"transporte de carga\",\n\"transporte de pasajeros\",\n\"transporte ecológico\",\n\"transporte para adultos mayores\",\n\"transporte público\",\n\"trato especial\",\n\"tráfico de armas\",\n\"tráfico de especies\",\n\"tráfico de especies protegidas\",\n\"tráfico de flora y fauna\",\n\"tráfico enorme\",\n\"tráfico horrible\",\n\"tráfico terrible\",\n\"turismo de conocimiento\",\n\"turismo de naturaleza\",\n\"turismo sostenible\",\n\"técnicos y profesionales\",\n\"universidad asequible\",\n\"universidad disponibles\",\n\"universidad para todos\",\n\"universidades de calidad\",\n\"urbanización inclusiva\",\n\"urbanización sostenible\",\n\"uso sostenible de la biodiversidad\",\n\"uso sostenible de los ecosistemas\",\n\"valores de ecosistemas y biodiversidad\",\n\"victimas de violencia\",\n\"vida sostenible\",\n\"violacion en grupo\",\n\"violación en grupo\",\n\"violencia basada en el genero\",\n\"violencia basada en el género\",\n\"violencia contra jóvenes\",\n\"violencia de genero\",\n\"violencia de género\",\n\"violencia física\",\n\"violencia psicológica\",\n\"violencia sexual\",\n\"vivienda adecuada\",\n\"vivienda inadecuada\",\n\"volatilidad de los alimentos\",\n\"volatilidad de los precios\",\n\"volumen de producción\",\n\"voto ciudadano\",\n\"víctima de asalto\",\n\"víctima de la violencia\",\n\"víctima de un delito\",\n\"víctima de violación\",\n\"víctima de violencia\",\n\"víctima del secuestro\",\n\"wi-fi asequible\",\n\"wi-fi costoso\",\n\"wi-fi es costoso\",\n\"wi-fi es muy costoso\",\n\"wi-fi lento\",\n\"wi-fi no asequible\",\n\"wi-fi no es asequible\",\n\"wi-fi no esta al alcance\",\n\"wi-fi no está al alcance\",\n\"zona de recuperación\",\n\"zonas protegidas\",\n\"zonas rurales\",\n\"zonas urbanas\",\n\"zonas verdes\",\n\"índice de pobreza multidimensional\",\n\"índices de paridad\",\n\"órganos sexuales\"\n]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/checkRelationComposeODStoWord",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"checkRelationComposeODStoWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkRelationComposeWordToODS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ngrams\":[\"Cambio climático\",\n\"Mortalidad materna\",\n\"PIB laboral\",\n\"Polo Norte\",\n\"Prevalencia de inseguridad\",\n\"Prevalencia de la mal nutrición\",\n\"Servicios básicos\",\n\"Servicios públicos asequibles\",\n\"Transporte para discapacitados\",\n\"Transporte seguro\",\n\"Transporte sostenible\",\n\"ablación genital femenina\",\n\"abuso sexual infantil\",\n\"acceso a alimentos\",\n\"acceso a cuidado de la salud\",\n\"acceso a electricidad\",\n\"acceso a internet\",\n\"acceso a la comida\",\n\"acceso a la energía\",\n\"acceso a la justicia\",\n\"acceso a la red\",\n\"acceso a la salud\",\n\"acceso a las medicinas\",\n\"acceso a letrinas\",\n\"acceso a los medicamentos\",\n\"acceso a los médicos\",\n\"acceso a medicamentos\",\n\"acceso a medicamentos y vacunas\",\n\"acceso a servicios de saneamiento\",\n\"acceso a un abogado\",\n\"acceso a un aseo\",\n\"acceso a un baño\",\n\"acceso a un hospital\",\n\"acceso a un medico\",\n\"acceso a un médico\",\n\"acceso a vacunas\",\n\"acceso al agua limpia\",\n\"acceso al aseo\",\n\"acceso al baño\",\n\"acceso al empleo\",\n\"acceso asequible\",\n\"acceso equitativo\",\n\"acceso legal\",\n\"acceso medico\",\n\"acceso médico\",\n\"acceso público a la información\",\n\"acceso universal\",\n\"accidente en el oficio\",\n\"accidente laboral\",\n\"accidentes de tráfico\",\n\"accidentes de tránsito\",\n\"accidentes en el oficio\",\n\"acondicionamiento de edificios\",\n\"acoso laboral\",\n\"acoso sexual\",\n\"actividades de adaptación\",\n\"actividades de investigación\",\n\"actividades de mitigación\",\n\"actividades productivas\",\n\"adaptación al cambio climático\",\n\"adaptación y mitigación\",\n\"administrar mal\",\n\"adquirir conocimientos\",\n\"adultos mayores\",\n\"afectados por conflictos\",\n\"agricultura productiva\",\n\"agricultura productiva y sostenible\",\n\"agricultura sostenible\",\n\"agua contaminada\",\n\"agua dulce\",\n\"agua esta contaminada\",\n\"agua está contaminada\",\n\"agua no potable\",\n\"agua potable\",\n\"aguas residuales\",\n\"alimentos seguros\",\n\"alimentos sostenibles\",\n\"altas cuotas escolares\",\n\"altas matrículas\",\n\"alud de tierra\",\n\"ampliación del transporte público\",\n\"apoyo a discapacitados\",\n\"apoyo al desempleado\",\n\"apoyo durante el desempleo\",\n\"apoyo financiero\",\n\"apoyo financiero para el cambio climático\",\n\"apoyo tecnológico\",\n\"apoyo técnico\",\n\"aprendizaje de calidad\",\n\"aprendizaje y bienestar\",\n\"asegurar la conservación\",\n\"asentamientos informales\",\n\"asistencia financiera\",\n\"asistencia oficial\",\n\"asistencia oficial para la conservación\",\n\"asistencia social\",\n\"atención de la salud reproductiva\",\n\"atención de salud decente\",\n\"atención de salud deficiente\",\n\"atención sanitaria\",\n\"aumento de diabetes\",\n\"aumento de la diabetes\",\n\"aumento de la temperatura\",\n\"aumento de las temperaturas\",\n\"aumento del salario mínimo\",\n\"ausencia de baños\",\n\"ayuda para mi\",\n\"ayuda por desempleo\",\n\"bache en el camino\",\n\"baches en el camino\",\n\"baches en la carretera\",\n\"baja remuneración\",\n\"bajo salario\",\n\"bajos salarios\",\n\"banco comercial\",\n\"banco mundial\",\n\"bandas criminales\",\n\"basada en la comunidad\",\n\"basura de la casa\",\n\"becas disponibles\",\n\"beneficios de desempleo\",\n\"beneficios por incapacidad\",\n\"bienes materiales\",\n\"bienestar humano\",\n\"bienestar psicosocial\",\n\"biodiversidad en la planificación\",\n\"buen aprendizaje\",\n\"buen colegio\",\n\"buen hospital\",\n\"buena educacion\",\n\"buena educación\",\n\"buena escuela\",\n\"buena profesora\",\n\"buena universidad\",\n\"buenas escuelas\",\n\"buenas oportunidades de empleo\",\n\"buenos profesores\",\n\"buenos programas de educación\",\n\"cadenas de producción\",\n\"cadenas de valor\",\n\"cadenas productivas\",\n\"calentamiento global\",\n\"calidad de vida\",\n\"calidad del aire\",\n\"calidad del hospital\",\n\"calidad del sistema de salud\",\n\"cambio climático\",\n\"camino lleno de baches\",\n\"caminos llenos de baches\",\n\"campaña de seguridad vial\",\n\"campañas sobre cambio climático\",\n\"capacidad de adaptación al cambio climático\",\n\"capacidad de mitigación del cambio climático\",\n\"capacidad para la planificación urbana\",\n\"cargo por emisiones\",\n\"carretera en horrible estado\",\n\"carretera peligrosa\",\n\"carreteras mejoradas\",\n\"catástrofe natural\",\n\"celular es costoso\",\n\"celular es demasiado cara\",\n\"centros de salud\",\n\"ciudades sostenibles\",\n\"clase media\",\n\"cobertura sanitaria universal\",\n\"cobrar el paro\",\n\"colegio profesional\",\n\"comercio de carbono\",\n\"comida barata y poco saludable\",\n\"comida no saludable disponible\",\n\"comida nutritiva\",\n\"comida nutritiva asequible\",\n\"comida nutritiva disponible\",\n\"comida nutritiva mas barata\",\n\"comida nutritiva más barata\",\n\"comida saludable disponible\",\n\"comida saludable es cara\",\n\"comida saludable es muy\",\n\"comida saludable no es asequible\",\n\"comida sana asequible\",\n\"comida sana mas barata\",\n\"comida sana más barata\",\n\"comida sana y barata\",\n\"competencias TIC\",\n\"compra masiva de tierra\",\n\"comprar carbón\",\n\"comprar gas\",\n\"comprar su voto\",\n\"comprar un voto\",\n\"compromiso ciudadano\",\n\"conciencia de la seguridad vial\",\n\"conciencia pública sobre cambio climático\",\n\"conciencia sobre cambio climático\",\n\"condiciones climáticas extremas\",\n\"condición indígena\",\n\"conexión de internet\",\n\"conexión lenta\",\n\"conexión mala\",\n\"conflicto armado\",\n\"conocimientos de sostenibilidad\",\n\"conocimientos pertinentes\",\n\"conseguí empleo\",\n\"conservación de ecosistemas\",\n\"conservación de ecosistemas terrestres\",\n\"conservación de la montaña\",\n\"conservación de zonas marinas\",\n\"conservación del suelo\",\n\"construcción sostenible\",\n\"consumo de alcohol\",\n\"consumo material\",\n\"consumo material interno por PIB\",\n\"consumo responsable\",\n\"consumo sostenible\",\n\"consumo y producción sostenible\",\n\"contaminación de hogares\",\n\"contaminación del agua\",\n\"contaminación del aire\",\n\"contaminación del suelo\",\n\"contaminación por actividades en tierra\",\n\"control de la tierra\",\n\"control del tabaco\",\n\"cooperación científica para los oceanos\",\n\"cooperación para la arquitectura sostenible\",\n\"corredor vial\",\n\"costo de carbono\",\n\"costo de datos móviles\",\n\"costo de la comida nutritiva\",\n\"costo de la comida sana\",\n\"costo de la universidad\",\n\"costo de las emisiones\",\n\"costo del celular\",\n\"costo del servicio móvil\",\n\"costo del wi-fi\",\n\"costos de internet\",\n\"costos del wi-fi\",\n\"creación de empleo\",\n\"crecimiento de microempresas\",\n\"crecimiento económico\",\n\"crecimiento infantil\",\n\"crisis económica\",\n\"crisis financiera\",\n\"crudo invierno\",\n\"crédito de carbono\",\n\"créditos asequibles\",\n\"créditos de carbono\",\n\"cuidado de salud universal\",\n\"cuidar a\",\n\"cultura de la sostenibilidad\",\n\"cultura de los pueblos\",\n\"cultura de paz\",\n\"cultura local\",\n\"cuotas escolares altas\",\n\"cuotas escolares asequibles\",\n\"cuotas escolares iguales\",\n\"dar de alta\",\n\"datos móviles asequible\",\n\"datos móviles es muy costoso\",\n\"datos móviles no asequible\",\n\"datos móviles son costosos\",\n\"datos móviles son muy costosos\",\n\"de niño\",\n\"debajo del salario mínimo\",\n\"defecación al aire libre\",\n\"delincuencia organizada\",\n\"denuncia de irregularidades\",\n\"denuncias por violencia\",\n\"derecho al empleo\",\n\"derecho al voto\",\n\"derecho laboral\",\n\"derechos de los trabajadores\",\n\"derechos humanos\",\n\"derechos laborales\",\n\"derechos legales\",\n\"derechos reproductivos\",\n\"derechos seguros\",\n\"desarrollo adecuado\",\n\"desarrollo bajo en carbono\",\n\"desarrollo de investigación y la innovación\",\n\"desarrollo de medicamentos\",\n\"desarrollo de tecnología\",\n\"desarrollo de tecnologías\",\n\"desarrollo de vacunas\",\n\"desarrollo económico\",\n\"desarrollo regional\",\n\"desarrollo sostenible\",\n\"desarrollo sustentable\",\n\"desarrollo urbano\",\n\"desastre ambiental\",\n\"desastre ambientales\",\n\"desastre natural\",\n\"desastre naturales\",\n\"desastre social\",\n\"desastres ambientales\",\n\"desastres económicos\",\n\"desastres naturales\",\n\"desastres sociales\",\n\"desechos peligrosos\",\n\"desechos químicos\",\n\"desechos sólidos urbanos\",\n\"desechos tóxicos\",\n\"deserción escolar\",\n\"desperdicio de alimentos\",\n\"despojo de tierra\",\n\"detener la deforestación\",\n\"detener la perdida de biodiversidad\",\n\"diabetes reducida\",\n\"dificultad para encontrar empleo\",\n\"dificultades para encontrar empleo\",\n\"difícil de encontrar empleo\",\n\"digno de confianza\",\n\"dinero sucio\",\n\"discriminacion contra\",\n\"discriminacion de genero\",\n\"discriminacion de género\",\n\"discriminacion por edad\",\n\"discriminacion por enfermedad mental\",\n\"discriminacion racial\",\n\"discriminación contra\",\n\"discriminación de genero\",\n\"discriminación de género\",\n\"discriminación por edad\",\n\"discriminación por enfermedad mental\",\n\"discriminación racial\",\n\"discriminar contra\",\n\"disparidades de genero\",\n\"disparidades de genero en la educación\",\n\"disparidades de género en la educación\",\n\"disponibilidad de comida\",\n\"diversidad alimentaria\",\n\"diversidad cultural\",\n\"diversificación industrial\",\n\"don nadie\",\n\"economia campesina\",\n\"economía del turismo\",\n\"economía naranja\",\n\"economía urbana\",\n\"ecosistemas en la planificación\",\n\"ecosistemas terrestres\",\n\"edificios eficientes\",\n\"edificios sostenibles\",\n\"educacion básica\",\n\"educacion universal\",\n\"educación accesible\",\n\"educación de calidad\",\n\"educación deportiva\",\n\"educación inaccesible\",\n\"educación para el cambio climático\",\n\"educación para el desarrollo sostenible\",\n\"educación para la sostenibilidad\",\n\"educación para todos\",\n\"educación preescolar\",\n\"educación primaria\",\n\"educación privada\",\n\"educación pública\",\n\"educación secundaria\",\n\"educación sexual\",\n\"educación sobre cambio climático\",\n\"educación superior\",\n\"educación terciaria\",\n\"educación universal\",\n\"efectos del desarrollo sostenible\",\n\"el acceso a un abogado\",\n\"el aumento del nivel de los oceanos\",\n\"el aumento del nivel de los océanos\",\n\"el peor tráfico\",\n\"el salario no es suficiente\",\n\"el tráfico esta mejor\",\n\"eleccion libre\",\n\"eleccion real\",\n\"eleccion verdadera\",\n\"elecciones reales\",\n\"elección libre\",\n\"elección real\",\n\"elección verdadera\",\n\"eliminación de discriminación\",\n\"eliminar corredores de remesas\",\n\"eliminar disparidades\",\n\"embarazo adolecente\",\n\"emergencia en desempleo\",\n\"emisiones de carbono\",\n\"emisiones de gases\",\n\"empleo de jóvenes\",\n\"empleo del turismo\",\n\"empleo informal\",\n\"empleo pleno\",\n\"empleo productivo\",\n\"empresas sostenibles\",\n\"en cinta\",\n\"en paro\",\n\"encontrar un medico\",\n\"encontrar un médico\",\n\"energía asequible\",\n\"energía limpia\",\n\"energía primaria\",\n\"energía renovable\",\n\"energía solar\",\n\"energía sustentable\",\n\"enfermedad mental\",\n\"enfermedad por agua contaminada\",\n\"enfermedades de transmisión sexual\",\n\"enfermedades no transmisibles\",\n\"enfermedades por agua contaminada\",\n\"enfermedades por productos químicos\",\n\"enfermedades respiratorias\",\n\"enfermedades transmisibles\",\n\"enfoque basado en el ecosistema\",\n\"enseñanza de calidad\",\n\"enseñanza de las ciencias\",\n\"enseñanza gratuita\",\n\"enseñanza primaria\",\n\"enseñanza secundaria\",\n\"entidades bancarias\",\n\"entornos de aprendizaje seguro\",\n\"equidad en el acceso a la justicia\",\n\"erradicar la pobreza\",\n\"escasez de agua\",\n\"escasez de medicamentos\",\n\"escasez de medicinas\",\n\"escuela asequible\",\n\"escuela barata\",\n\"escuela cara\",\n\"escuela de calidad\",\n\"escuela más barata\",\n\"escuelas asequibles\",\n\"escuelas de calidad\",\n\"escuelas ecológicas\",\n\"escuelas para la sostenibilidad\",\n\"espacio público\",\n\"espacios públicos\",\n\"estaciones de datos para el monitoreo y la conservación\",\n\"estación piscícola\",\n\"estado de derecho\",\n\"estilos de vida en armonía con la naturaleza\",\n\"estrategias de turismo sostenible\",\n\"estrategias nacionales sobre cambio climático\",\n\"eventos sobre cambio climático\",\n\"excelente educación\",\n\"excelentes escuelas\",\n\"excelentes programas de educación\",\n\"excelentes universidades\",\n\"expansión urbana\",\n\"explotacion de los trabajadores\",\n\"explotación de los trabajadores\",\n\"explotación sexual\",\n\"falta de agua\",\n\"falta de baños\",\n\"falta de higiene\",\n\"falta de saneamiento\",\n\"fecundidad adolescentes\",\n\"fenómenos extremos\",\n\"fin del maltrato infantil\",\n\"fin del mundo\",\n\"finanzas del delito\",\n\"flujo de capital\",\n\"fondos del estado\",\n\"fondos públicos\",\n\"forma de violencia\",\n\"formación de docentes\",\n\"formación profesional\",\n\"formación sobre cambio climático\",\n\"formalización de microempresas\",\n\"formalizar tendencia de tierra\",\n\"fuentes renovables\",\n\"funcionarios público\",\n\"ganar suficiente dinero\",\n\"gasto público\",\n\"gastos sanitarios\",\n\"gestión del agua\",\n\"gestión del cambio climático\",\n\"gestión del riesgo de desastres\",\n\"gestión ecológica de productos químicos\",\n\"gestión para el cambio climático\",\n\"gestión sostenible\",\n\"gestión sostenible del bosque\",\n\"gobierno corrupto\",\n\"gobierno democrático\",\n\"gobiernos incluyentes\",\n\"gobiernos locales\",\n\"gran aprendizaje\",\n\"gran educación\",\n\"gran escuela\",\n\"gran profesora\",\n\"gran universidad\",\n\"grandes empresas sostenibles\",\n\"grandes escuelas\",\n\"grandes profesores\",\n\"grandes universidades\",\n\"hacer efecto\",\n\"hacer responsable\",\n\"hambre en el mundo\",\n\"hombres pobres\",\n\"hospital decente\",\n\"hospital deficiente\",\n\"hueco en la carretera\",\n\"huecos en la carretera\",\n\"huella de carbono\",\n\"huella ecológica\",\n\"huella material\",\n\"huella material por PIB\",\n\"huellas de carbono\",\n\"igualdad de genero\",\n\"igualdad de oportunidades\",\n\"igualdad de remuneración\",\n\"igualdad en educación\",\n\"igualdad en la universidad\",\n\"impacto ambiental\",\n\"incentivos para la reforestación\",\n\"incidencia de diabetes\",\n\"incidencia de la enfermedad del corazón\",\n\"incidencia de la malaria\",\n\"incidencia de la tuberculosis\",\n\"incidencia de las enfermedades crónicas\",\n\"incidencia de las enfermedades del corazón\",\n\"inclusión social\",\n\"industria sostenible\",\n\"industrialización inclusiva\",\n\"industrialización sostenible\",\n\"industrias sostenibles\",\n\"infecciones por el VIH\",\n\"información disponible para el desarrollo sostenible\",\n\"infraestructura educativa\",\n\"infraestructura rural\",\n\"infraestructura sostenible\",\n\"infraestructura vial\",\n\"infraestructura y materiales para estudiantes con discapacidad\",\n\"infraestructuras regionales\",\n\"infraestructuras sostenibles\",\n\"ingreso medio\",\n\"ingreso nacional bruto\",\n\"ingresos para discapacitados\",\n\"inseguridad alimentaria\",\n\"inseguridad respecto a la comida\",\n\"institución financiera\",\n\"institución pública corrupta\",\n\"instituto de investigación\",\n\"instituto universitario\",\n\"instrumentos de planificación ambiental\",\n\"internet asequible\",\n\"internet con fines pedagógicos\",\n\"internet costoso\",\n\"internet es costoso\",\n\"internet es muy costoso\",\n\"internet lenta\",\n\"internet lento\",\n\"internet no asequible\",\n\"internet no es asequible\",\n\"inversión privada\",\n\"investigación agrícola\",\n\"investigación científica\",\n\"investigación científica para la conservación de oceanos\",\n\"investigación para la sostenibilidad\",\n\"investigación y desarrollo\",\n\"jovenes y adultos\",\n\"jovenes y adultos competentes\",\n\"justicia corrupta\",\n\"justicia para\",\n\"jóvenes empleados\",\n\"jóvenes sin capacitación\",\n\"jóvenes sin estudios\",\n\"jóvenes y adultos\",\n\"jóvenes y adultos competentes\",\n\"la comida nutritiva no es asequible\",\n\"la comida sana no es asequible\",\n\"lavado de manos\",\n\"legitimidad de las instituciones\",\n\"libertad de asociación\",\n\"libertad de voto\",\n\"libertad política\",\n\"libertades de voto\",\n\"libertades políticas\",\n\"los gay\",\n\"lucha contra la desertificación\",\n\"luz eléctrica\",\n\"línea de crédito\",\n\"línea de pobreza\",\n\"mal aprendizaje\",\n\"mal colegio\",\n\"mal servicio de salud\",\n\"mal servicio medico\",\n\"mal servicio médico\",\n\"mal uso\",\n\"mal utilizado\",\n\"mal utilizar\",\n\"mala administracion\",\n\"mala administración\",\n\"mala conexión\",\n\"mala educación\",\n\"mala gestión\",\n\"mala nutrición\",\n\"mala profesora\",\n\"mala red\",\n\"mala sistema de salud\",\n\"mala universidad\",\n\"malas condiciones de la carretera\",\n\"malas condiciones de la vía\",\n\"malas escuelas\",\n\"malla vial\",\n\"malos profesores\",\n\"malos servicios de salud\",\n\"mano de obra\",\n\"marco jurídico\",\n\"mas caliente\",\n\"mas empleo\",\n\"materiales locales para la construcción\",\n\"matrimonio gay\",\n\"matrimonio infantil\",\n\"mecanismos de comercialización\",\n\"mecanismos de desarrollo par ala planificación\",\n\"medianas empresas\",\n\"medicamentos asequibles\",\n\"medicamentos baratos\",\n\"medicinas asequibles\",\n\"medicinas caras\",\n\"medico disponible\",\n\"medidas de mitigación\",\n\"medio ambiente\",\n\"medio de transporte\",\n\"mejor aprendizaje\",\n\"mejor atención de salud\",\n\"mejor carretera\",\n\"mejor educación\",\n\"mejor empleo\",\n\"mejor escuela\",\n\"mejor profesora\",\n\"mejor universidad\",\n\"mejorar la seguridad vial\",\n\"mejorar las carreteras\",\n\"mejores carreteras\",\n\"mejores condiciones de las carreteras\",\n\"mejores escuelas\",\n\"mejores profesores\",\n\"mejores programas de educación\",\n\"mejores servicios de salud\",\n\"mejores universidades\",\n\"menos empleo\",\n\"menos empleos\",\n\"mercados agropecuarios\",\n\"merecemos mejores carreteras\",\n\"merecemos nuevas carreteras\",\n\"metas de adaptación y mitigación\",\n\"metas nacionales de diversidad\",\n\"mismo sexo\",\n\"mitigación del cambio climático\",\n\"mitigar el cambio climático\",\n\"modernización tecnológica\",\n\"mortalidad infantil\",\n\"mortalidad materna\",\n\"mortalidad por lesiones\",\n\"movilidad sostenible\",\n\"muertos por desastres naturales\",\n\"mutilación genital femenina\",\n\"médico disponible\",\n\"médicos disponibles\",\n\"naciones unidas\",\n\"necesidades de planificación\",\n\"necesitamos mas carreteras\",\n\"necesitamos mejores carreteras\",\n\"necesitamos más carreteras\",\n\"necesitamos nuevas carreteras\",\n\"necesitan justicia\",\n\"nivel de carbono\",\n\"nivel del mar\",\n\"nivel global del mar\",\n\"nivel mínimo de competencias\",\n\"niveles de carbono\",\n\"niveles de enseñanza\",\n\"niveles del mar\",\n\"no comercial\",\n\"no hay aseo\",\n\"no hay baño\",\n\"no hay baños\",\n\"no hay buenos empleos\",\n\"no hay comida sana\",\n\"no paga lo suficiente\",\n\"no paga mucho\",\n\"no puede conseguir empleo\",\n\"no puede trabajar\",\n\"no pueden trabajar\",\n\"no puedo encontrar empleo\",\n\"no saludable\",\n\"no tiene educación\",\n\"no transmisibles\",\n\"no violencia\",\n\"normas de seguridad\",\n\"nueva carretera\",\n\"nuevas carreteras\",\n\"odio racial\",\n\"ola de calor\",\n\"oportunidad de empleo\",\n\"oportunidades de empleo\",\n\"oportunidades de subsistencia sostenible\",\n\"oportunidades profesionales\",\n\"orientación agrícola\",\n\"orientación sexual\",\n\"oro negro\",\n\"pagar carbón\",\n\"pagar datos móviles\",\n\"pagar el celular\",\n\"pagar energía\",\n\"pagar internet\",\n\"pagar la atención de salud\",\n\"pagar las medicinas\",\n\"pagar los medicamentos\",\n\"pagar un seguro medico\",\n\"pagar wi-fi\",\n\"para todo tiempo\",\n\"parque nacional\",\n\"parque natural nacional\",\n\"participa en\",\n\"participación ciudadana\",\n\"participación de adultos\",\n\"participación de jovenes y adultos\",\n\"participación de jóvenes\",\n\"participación de jóvenes y adultos\",\n\"participación de la comunidad\",\n\"participación en el aprendizaje\",\n\"participar en\",\n\"participaron en\",\n\"patios productivos\",\n\"patrimonio natural\",\n\"país desarrollado\",\n\"países en desarrollo\",\n\"pensión por desempleo\",\n\"peor aprendizaje\",\n\"peor educación\",\n\"peor escuela\",\n\"peor profesora\",\n\"peor tráfico\",\n\"peor universidad\",\n\"pequeñas empresas\",\n\"pequeñas industrias\",\n\"perdida de bosque natural\",\n\"perdida de la biodiversidad\",\n\"perdida del empleo\",\n\"perdidas de alimentos en las ventas al por menor\",\n\"perdidas en campo\",\n\"perdió su empleo\",\n\"pesca ilegal\",\n\"placa huella\",\n\"planes de acción\",\n\"planes nacionales sobre cambio climático\",\n\"planificación ambiental\",\n\"planificación para el cambio climático\",\n\"planificación territorial\",\n\"poblaciones de peces\",\n\"población adulta\",\n\"población con gastos sanitarios\",\n\"población rural\",\n\"pobreza extrema\",\n\"pobreza multidimensional\",\n\"pocas oportunidades de empleo\",\n\"poder comprar alimentos\",\n\"poder comprar comida\",\n\"poder comprar comida no saludable\",\n\"poder comprar comida nutritiva\",\n\"poder comprar comida sana\",\n\"poder hacer mercado\",\n\"poder pagar el medico\",\n\"poder pagar el médico\",\n\"poder pagar las medicinas\",\n\"policia corrupta\",\n\"polución marina\",\n\"política nacional de cambio climático\",\n\"políticas de inclusión\",\n\"políticas de turismo sostenible\",\n\"poner atención al clima\",\n\"por debajo del salario mínimo\",\n\"precio de alimentos\",\n\"precio de datos móviles\",\n\"precio de educación\",\n\"precio de la carne\",\n\"precio de la comida nutritiva\",\n\"precio de la comida sana\",\n\"precio de la escuela\",\n\"precio de las emisiones\",\n\"precio de las escuelas\",\n\"precio de las medicinas\",\n\"precio de los alimentos\",\n\"precio de los medicamentos\",\n\"precio de los vegetales\",\n\"precio del carbono\",\n\"precio del internet\",\n\"precio del servicio móvil\",\n\"precio del wi-fi\",\n\"precios de alimentos\",\n\"precios de datos móviles\",\n\"precios de internet\",\n\"precios del servicio móvil\",\n\"precios del wi-fi\",\n\"predio de internet\",\n\"prevencion y tratamiento\",\n\"prevención de riesgos naturales\",\n\"prevención y tratamiento\",\n\"prevenir contaminación marina\",\n\"primera infancia\",\n\"problemas para conseguir empleo\",\n\"problemas para encontrar empleo\",\n\"procesos limpios\",\n\"producción local\",\n\"producción más sostenible\",\n\"producción sostenible\",\n\"productividad agrícola\",\n\"productividad de los oceanos\",\n\"productividad económica\",\n\"producto interno bruto\",\n\"productores de alimentos\",\n\"productos básicos\",\n\"productos ilegales de flora y fauna\",\n\"productos químicos\",\n\"profesorado de educación\",\n\"profesores de calidad\",\n\"programas de enseñanza superior\",\n\"programas de formación profesional\",\n\"programas educativos para el cambio climático\",\n\"programas técnicos\",\n\"promoción de la cultura local\",\n\"promoción del consumo local\",\n\"promover la cultura\",\n\"promover los productos locales\",\n\"propiedad de la comunidad\",\n\"prostitución infantil\",\n\"protección a comunidades afectadas\",\n\"protección a comunidades vulnerables\",\n\"protección a pobres\",\n\"protección de ecosistemas terrestres\",\n\"protección de flora y fauna\",\n\"protección de zonas marinas\",\n\"protección financiera frente a desastres\",\n\"protección pública\",\n\"protección social\",\n\"proteger los bosques\",\n\"proyecto productivo\",\n\"proyecto territorial de adaptación y mitigación\",\n\"proyectos productivos\",\n\"práctica sostenible\",\n\"préstamo estudiantil\",\n\"pueblos indigenas\",\n\"pueblos indígenas\",\n\"purificación de agua\",\n\"pérdida de peso\",\n\"pérdida del empleo\",\n\"pérdidas económicas\",\n\"queremos mejores carreteras\",\n\"queremos nuevas carreteras\",\n\"quieren justicia\",\n\"recolección de agua\",\n\"recortes sociales\",\n\"recuperación de los activos robados\",\n\"red móvil\",\n\"reducción de efectos\",\n\"reducción de efectos del cambio climático\",\n\"reducción de emisiones\",\n\"reducción de pobreza\",\n\"reducción de riesgo\",\n\"reducción de riesgo a desastres\",\n\"reducción del desperdicio\",\n\"reducción del riesgo\",\n\"reducción salarial\",\n\"reducir contaminación marina\",\n\"reducir formas de violencia\",\n\"reducir la diabetes\",\n\"reducir la pobreza\",\n\"reducir muertes relacionadas con conflictos\",\n\"reducir perdidas económicas\",\n\"registro de nacimiento\",\n\"relaciones sexuales\",\n\"relleno sanitario\",\n\"rendir cuentas a los ciudadanos\",\n\"reserva ecológica\",\n\"reserva natural\",\n\"reservas de alimentos\",\n\"residuos de la casa\",\n\"residuos de las casas\",\n\"residuos del hogar\",\n\"residuos peligrosos\",\n\"residuos químicos\",\n\"residuos sólidos\",\n\"resiliencia a riesgos climáticos\",\n\"resiliencia al clima\",\n\"resultados de aprendizaje\",\n\"riesgo de desastres\",\n\"riesgo de salud\",\n\"riesgo natural\",\n\"riesgo relacionados con el clima\",\n\"riesgos climáticos\",\n\"salario bajo\",\n\"salario mínimo\",\n\"salud asequibles\",\n\"salud del oceano\",\n\"salud mental\",\n\"salud mental y bienestar\",\n\"salud mundial\",\n\"salud pública\",\n\"salud reproductiva\",\n\"salud sexual\",\n\"salud sexual y reproductiva\",\n\"salud universal\",\n\"saneamiento deficiente\",\n\"saneamiento e higiene\",\n\"saneamiento para el lavado de manos\",\n\"saneamiento por sexo\",\n\"satisfacción con los servicios públicos\",\n\"sector agricola\",\n\"sector agrícola\",\n\"sector del turismo\",\n\"sector del turismo sostenible\",\n\"secuestro de carbono\",\n\"seguridad alimentaria\",\n\"seguridad de los trabajadores\",\n\"seguridad del trabajador\",\n\"seguridad jurídica\",\n\"seguridad pública\",\n\"seguridad social\",\n\"seguridad vial\",\n\"seguro de salud asequible\",\n\"sensibilización al cambio climático\",\n\"sensibilización de públicos sobre cambio climático\",\n\"sensibilización sobre cambio climático\",\n\"servicio celular muy costoso\",\n\"servicio de agua\",\n\"servicio de salud gratuito\",\n\"servicio energético\",\n\"servicio energético moderno\",\n\"servicio energético sostenible\",\n\"servicio medico mejorado\",\n\"servicio médico mejorado\",\n\"servicio móvil costoso\",\n\"servicio móvil muy costoso\",\n\"servicios básicos\",\n\"servicios básicos adecuados\",\n\"servicios de atención\",\n\"servicios de desarrollo\",\n\"servicios de higiene\",\n\"servicios de rehabilitación\",\n\"servicios de salud\",\n\"servicios de salud sexual y reproductiva\",\n\"servicios de saneamiento\",\n\"servicios de seguros\",\n\"servicios públicos\",\n\"sillas de ruedas\",\n\"sin acceso a las universidades\",\n\"sin combustible para cocinar\",\n\"sin electricidad\",\n\"sin energía\",\n\"sin luz\",\n\"sistema de salud decente\",\n\"sistema de salud deficiente\",\n\"situaciones vulnerables\",\n\"sostenibilidad ambiental\",\n\"suministro de agua potable\",\n\"súper alimento\",\n\"tamaño de la producción\",\n\"tasa de crecimiento\",\n\"tasa de desempleo\",\n\"tasa de fecundidad\",\n\"tasa de mortalidad\",\n\"tasa de mortalidad materna\",\n\"tecnología avanzada\",\n\"tecnología de la información y las comunicaciones\",\n\"tecnología ecológica\",\n\"tecnología limpia\",\n\"tecnología para consumo sostenible\",\n\"tecnologías ecológicas\",\n\"tecnologías limpias\",\n\"tecnologías para producción sostenible\",\n\"temporada de invierno\",\n\"temporada de sequía\",\n\"tendencia de tierra\",\n\"tenía electricidad\",\n\"tercera edad\",\n\"tiene electricidad\",\n\"tienen electricidad\",\n\"tierras afectadas\",\n\"tipo de explotación\",\n\"tortura infantil\",\n\"trabajadores explotados\",\n\"trabajadores migrantes\",\n\"trabajando en condiciones peligrosas\",\n\"transporte de carga\",\n\"transporte de pasajeros\",\n\"transporte ecológico\",\n\"transporte para adultos mayores\",\n\"transporte público\",\n\"trato especial\",\n\"tráfico de armas\",\n\"tráfico de especies\",\n\"tráfico de especies protegidas\",\n\"tráfico de flora y fauna\",\n\"tráfico enorme\",\n\"tráfico horrible\",\n\"tráfico terrible\",\n\"turismo de conocimiento\",\n\"turismo de naturaleza\",\n\"turismo sostenible\",\n\"técnicos y profesionales\",\n\"universidad asequible\",\n\"universidad disponibles\",\n\"universidad para todos\",\n\"universidades de calidad\",\n\"urbanización inclusiva\",\n\"urbanización sostenible\",\n\"uso sostenible de la biodiversidad\",\n\"uso sostenible de los ecosistemas\",\n\"valores de ecosistemas y biodiversidad\",\n\"victimas de violencia\",\n\"vida sostenible\",\n\"violacion en grupo\",\n\"violación en grupo\",\n\"violencia basada en el genero\",\n\"violencia basada en el género\",\n\"violencia contra jóvenes\",\n\"violencia de genero\",\n\"violencia de género\",\n\"violencia física\",\n\"violencia psicológica\",\n\"violencia sexual\",\n\"vivienda adecuada\",\n\"vivienda inadecuada\",\n\"volatilidad de los alimentos\",\n\"volatilidad de los precios\",\n\"volumen de producción\",\n\"voto ciudadano\",\n\"víctima de asalto\",\n\"víctima de la violencia\",\n\"víctima de un delito\",\n\"víctima de violación\",\n\"víctima de violencia\",\n\"víctima del secuestro\",\n\"wi-fi asequible\",\n\"wi-fi costoso\",\n\"wi-fi es costoso\",\n\"wi-fi es muy costoso\",\n\"wi-fi lento\",\n\"wi-fi no asequible\",\n\"wi-fi no es asequible\",\n\"wi-fi no esta al alcance\",\n\"wi-fi no está al alcance\",\n\"zona de recuperación\",\n\"zonas protegidas\",\n\"zonas rurales\",\n\"zonas urbanas\",\n\"zonas verdes\",\n\"índice de pobreza multidimensional\",\n\"índices de paridad\",\n\"órganos sexuales\"\n]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/checkRelationComposeWordToODS",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"checkRelationComposeWordToODS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "redeclareRelation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"name": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/redeclareRelation",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"redeclareRelation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toLowerCaseName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/toLowerCaseName",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"toLowerCaseName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countAttributes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/countAttributes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"countAttributes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadOdsRelationsWords",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filename\":\"database_ods_v1.csv\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/uploadOdsRelationsWords",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"uploadOdsRelationsWords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadOdsRelationsWordsFromCsv",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file_csv",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/uploadOdsRelationsWordsFromCsv",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"uploadOdsRelationsWordsFromCsv"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

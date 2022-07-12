@@ -1,0 +1,30 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "leccion3": "Controller.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lriverarivero33/Example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs":  {
+    "url": "https://github.com/lriverarivero33/Example.git"
+  },
+  "homepage": "hhttps://github.com/lriverarivero33/#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.11",
+    "nodemon": "^1.19.1"
+  }
+}
