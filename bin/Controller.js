@@ -14,7 +14,7 @@ class Controller {
         try {
             //se intenta establecer una conexion con los datos de conexion
             await mongoose.connect(
-                "mongodb+srv://kikret:17DYcr6Zow5TYCSu@cluster0-9ek42.mongodb.net/test?retryWrites=true&w=majority",
+                "mongodb+srv://Lfernandoxd:admin@cluster0.jswem.mongodb.net/?retryWrites=true&w=majority",
                 //"mongodb://localhost:27017/my_music_collection_db",
                 { useNewUrlParser: true }
             );
